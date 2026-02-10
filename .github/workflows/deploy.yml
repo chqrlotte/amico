@@ -40,3 +40,13 @@ jobs:
             --content-type "text/css" --cache-control "no-cache, no-store, must-revalidate" --metadata-directive REPLACE
           aws s3 cp s3://amico-vegesack.com/script.js s3://amico-vegesack.com/script.js \
             --content-type "application/javascript" --cache-control "no-cache, no-store, must-revalidate" --metadata-directive REPLACE
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          DISTRIBUTION_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items[?contains(@, 'amico-vegesack.com')]].Id" --output text)
+          if [ -n "$DISTRIBUTION_ID" ]; then
+            aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"
+            echo "CloudFront cache invalidated for distribution: $DISTRIBUTION_ID"
+          else
+            echo "No CloudFront distribution found for amico-vegesack.com"
+          fi
