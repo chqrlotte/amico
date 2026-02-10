@@ -443,19 +443,14 @@ window.addEventListener('scroll', () => {
 // ===================================
 // Smooth Scroll for Anchor Links
 // ===================================
-document.querySelectorAll('a[href^="#"]:not(.menu-toggle)').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(.menu-toggle):not(.news-toggle):not(.lokal-toggle)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        // Skip if it's the menu toggle
-        if (this.classList.contains('menu-toggle')) {
-            return;
-        }
-        
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target && target.id !== 'menu') {
             const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-            
+
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
