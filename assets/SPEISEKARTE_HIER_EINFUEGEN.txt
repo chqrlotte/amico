@@ -1,0 +1,5 @@
+# Platzhalter für Ihre Speisekarte
+
+Bitte ersetzen Sie diese Datei mit Ihrer eigenen Speisekarte im PDF-Format.
+
+Benennen Sie Ihre Speisekarte als `speisekarte.pdf` und legen Sie sie in diesem Ordner ab.

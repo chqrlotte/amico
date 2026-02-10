@@ -1,0 +1,14 @@
+{
+  "Changes": [{
+    "Action": "UPSERT",
+    "ResourceRecordSet": {
+      "Name": "amico-vegesack.com",
+      "Type": "A",
+      "AliasTarget": {
+        "HostedZoneId": "Z21DNDUVLTQW6Q",
+        "DNSName": "s3-website.eu-central-1.amazonaws.com",
+        "EvaluateTargetHealth": false
+      }
+    }
+  }]
+}

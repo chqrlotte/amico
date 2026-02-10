@@ -1,0 +1,12 @@
+# Assets Ordner
+
+Dieser Ordner enthält alle Bilder und Dateien für die Website.
+
+## Struktur:
+- `images/` - Bilder für die Galerie und andere Bereiche
+- `speisekarte.pdf` - Ihre Speisekarte als PDF
+
+## Anleitung:
+1. Fügen Sie Ihre Speisekarte als `speisekarte.pdf` in diesen Ordner ein
+2. Fügen Sie Restaurant-Fotos in den `images/` Ordner ein
+3. Benennen Sie die Bilder sinnvoll (z.B. `gericht-pasta-1.jpg`, `restaurant-innen.jpg`)
