@@ -26,6 +26,8 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#news" class="nav-link news-toggle">Neuigkeiten</a></li>
+                    <li><a href="#lokal" class="nav-link lokal-toggle">Unser Lokal</a></li>
                     <li><a href="#menu" class="nav-link menu-toggle">Speisekarte</a></li>
                     <li><a href="#gallery" class="nav-link">Galerie</a></li>
                 </ul>
@@ -206,6 +208,84 @@
             </div>
         </div>
     </footer>
+
+    <!-- Unser Lokal Section -->
+    <section id="lokal" class="menu menu-hidden">
+        <div class="container">
+            <div class="menu-header-wrapper">
+                <div class="section-header">
+                    <h2 class="section-title">Unser Lokal</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <button class="lokal-close" aria-label="Unser Lokal schließen">✕</button>
+            </div>
+
+            <div class="lokal-gallery">
+                <div class="lokal-item">
+                    <img src="assets/images/1983fa52-deeb-46db-b25e-01d796bfc7fb.jpg" alt="Eingang Amico Vegesack" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="assets/images/7f268435-5f55-4ce3-91a2-5708c8b5eb7f.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/0a7544cf-bfae-4e1d-ad09-a5cb6d88e48d.JPG" alt="Bar mit rustikaler Holzwand" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/214dda9e-fd8b-4ea8-8fed-c94dc6116487.jpg" alt="Unser Steinofen in der Pizza Zone" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/e82d137b-e145-42ed-a666-9af00916e819.jpg" alt="Terrasse mit italienischer Flagge" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/002818bc-7096-49a0-8ab9-3679af78d435.JPG" alt="Thekenbereich mit Backsteinwand" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/61614440-4f6f-417b-94e1-f86f97b7f287.JPG" alt="Italienisches Flair mit Vespa-Gemälde" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/5b859080-7b54-4c5a-9e97-b0bac357cb0b.JPG" alt="Blick hinter die Bar zur Küche" loading="lazy">
+                </div>
+                <div class="lokal-item">
+                    <img src="assets/images/dd44ff88-b4c4-4587-8d7a-6a24ab8e2d63.jpg" alt="Gemütliche Sitzecke am Pizzaofen" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="menu menu-hidden">
+        <div class="container">
+            <div class="menu-header-wrapper">
+                <div class="section-header">
+                    <h2 class="section-title">Neuigkeiten</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <button class="news-close" aria-label="Neuigkeiten schließen">✕</button>
+            </div>
+
+            <div class="news-list">
+                <!-- News Item 1 -->
+                <article class="news-item">
+                    <div class="news-date">10. Februar 2026</div>
+                    <h3 class="news-title">Willkommen auf unserer neuen Webseite!</h3>
+                    <p class="news-body">
+                        Wir freuen uns, Ihnen unsere neue Webseite präsentieren zu dürfen.
+                        Hier finden Sie ab sofort alle Neuigkeiten rund um das Amico Vegesack.
+                    </p>
+                </article>
+
+                <!-- Weitere News-Einträge hier einfügen:
+                <article class="news-item">
+                    <div class="news-date">DATUM</div>
+                    <h3 class="news-title">TITEL</h3>
+                    <p class="news-body">TEXT</p>
+                </article>
+                -->
+            </div>
+        </div>
+    </section>
 
     <!-- Impressum Section -->
     <section id="impressum" class="menu menu-hidden">

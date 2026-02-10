@@ -151,6 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 impressumSection.classList.add('menu-hidden');
                 document.body.style.overflow = '';
             }
+            if (newsSection && !newsSection.classList.contains('menu-hidden')) {
+                newsSection.classList.add('menu-hidden');
+                document.body.style.overflow = '';
+            }
+            if (lokalSection && !lokalSection.classList.contains('menu-hidden')) {
+                lokalSection.classList.add('menu-hidden');
+                document.body.style.overflow = '';
+            }
         }
     });
 
@@ -200,6 +208,102 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else {
         console.error('Mittagstisch close button not found');
+    }
+
+    // Lokal Toggle setup
+    const lokalToggleLinks = document.querySelectorAll('.lokal-toggle');
+    const lokalSection = document.getElementById('lokal');
+    const lokalClose = document.querySelector('.lokal-close');
+
+    if (lokalSection) {
+        lokalSection.classList.add('menu-hidden');
+    }
+
+    lokalToggleLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (lokalSection) {
+                lokalSection.classList.remove('menu-hidden');
+                document.body.style.overflow = 'hidden';
+                lokalSection.scrollTop = 0;
+            }
+
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+                const spans = mobileMenuToggle?.querySelectorAll('span');
+                if (spans) {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            }
+        });
+    });
+
+    if (lokalClose) {
+        lokalClose.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (lokalSection) {
+                lokalSection.classList.add('menu-hidden');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // News Toggle setup
+    const newsToggleLinks = document.querySelectorAll('.news-toggle');
+    const newsSection = document.getElementById('news');
+    const newsClose = document.querySelector('.news-close');
+
+    // Make sure news is hidden on load
+    if (newsSection) {
+        newsSection.classList.add('menu-hidden');
+    }
+
+    // Open news
+    newsToggleLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (newsSection) {
+                newsSection.classList.remove('menu-hidden');
+                document.body.style.overflow = 'hidden';
+                newsSection.scrollTop = 0;
+            }
+
+            // Close mobile nav if open
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+                const spans = mobileMenuToggle?.querySelectorAll('span');
+                if (spans) {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            }
+        });
+    });
+
+    // Close news
+    if (newsClose) {
+        newsClose.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (newsSection) {
+                newsSection.classList.add('menu-hidden');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     // Impressum Toggle setup
